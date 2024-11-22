@@ -22,3 +22,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 WORKDIR /code
 
 COPY ./src /code/
+
+RUN chmod -R 777 vendor storage
