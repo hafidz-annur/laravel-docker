@@ -10,6 +10,7 @@ RUN apk add --no-cache \
     freetype-dev \
     zip \
     unzip \
+    nano \
     && docker-php-ext-configure gd \
     --with-freetype \
     --with-jpeg \
