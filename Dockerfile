@@ -24,3 +24,5 @@ WORKDIR /code
 COPY ./src /code/
 
 RUN chmod -R 777 vendor storage
+
+RUN composer install
