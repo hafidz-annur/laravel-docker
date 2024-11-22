@@ -15,22 +15,7 @@ services:
             - ./src:/code
         networks:
             - laravel
-
-    # mysql:
-    #     container_name: mysql_container
-    #     image: mysql:5.7
-    #     ports:
-    #         - "3306:3306"
-    #     volumes:
-    #         - ./docker/mysql:/var/lib/mysql
-    #     networks:
-    #         - laravel
-    #     environment:
-    #         - MYSQL_ROOT_PASSWORD=root
-    #         - MYSQL_DATABASE=laravel
-    #         - MYSQL_USER=laravel
-    #         - MYSQL_PASSWORD=laravel
-
+            
     nginx:
         container_name: nginx_container
         image: nginx:alpine
@@ -43,16 +28,4 @@ services:
             - laravel
         depends_on:
             - php
-    
-    # phpmyadmin:
-    #     container_name: phpmyadmin_container
-    #     image: phpmyadmin/phpmyadmin:latest
-    #     ports:
-    #         - "8081:80"
-    #     environment:
-    #         - PMA_HOST=host.docker.internal
-    #         - PMA_USER=root
-    #         - PMA_PASSWORD=
-    #     networks:
-    #         - laravel
              
