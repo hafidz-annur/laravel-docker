@@ -7,5 +7,5 @@ WORKDIR /code
 COPY ./src /code/
 
 # Set appropriate permissions for the storage directory and its subdirectories
-RUN chown -R www-data:www-data /code/storage && \
-    chmod -R 775 /code/storage
+RUN chown -R www-data:www-data /code/storage* && \
+    chmod -R 775 /code/storage*
