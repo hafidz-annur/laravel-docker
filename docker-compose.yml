@@ -28,4 +28,3 @@ services:
             - laravel
         depends_on:
             - php
-             
